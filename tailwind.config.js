@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ...fontFamily,
-        sans: ["Poppins", "ui-sans-serif", "system-ui"],
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
       },
     },
   },
