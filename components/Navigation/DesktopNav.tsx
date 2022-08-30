@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const DesktopNav = () => {
   const router = useRouter();
   return (
-    <nav className="fixed w-full">
+    <nav className="fixed w-full border-b-gray-200 border h-16 flex items-center px-[2vw] bg-white">
       <ul className="flex space-x-4">
         {NAV_ITEMS.map(({ id, title, route }) => (
           <li key={id}>
