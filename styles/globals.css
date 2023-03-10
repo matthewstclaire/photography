@@ -45,12 +45,16 @@ footer {
 */
 html,
 body {
+  font-family: 'Cormorant Garamond', serif;
+  /* font-family: 'Roboto', sans-serif; */
 }
 /*
   Typographic tweaks!
   4. Add accessible line-height
   5. Improve text rendering
+
 */
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
