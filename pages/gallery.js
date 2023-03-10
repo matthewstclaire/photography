@@ -9,32 +9,32 @@ const bjjArray = [
   {
     number: 1,
     title: 'Clients',
-    image: 'images/gallery/alec.jpg',
+    image: '/images/gallery/alec.jpg',
   },
   {
     number: 2,
     title: 'Nora',
-    image: 'images/gallery/denton.jpg',
+    image: '/images/gallery/denton.jpg',
   },
   {
     number: 3,
     title: 'Nora',
-    image: 'images/gallery/tiredhailey.jpg',
+    image: '/images/gallery/tiredhailey.jpg',
   },
   {
     number: 4,
     title: 'Nora',
-    image: 'images/gallery/blake.jpg',
+    image: '/images/gallery/blake.jpg',
   },
   {
     number: 5,
     title: 'Nora',
-    image: 'images/gallery/veronika.jpg',
+    image: '/images/gallery/veronika.jpg',
   },
   {
-    number: 5,
+    number: 6,
     title: 'Nora',
-    image: 'images/gallery/nora2.jpg',
+    image: '/images/gallery/nora2.jpg',
   },
 ];
 
@@ -42,17 +42,17 @@ const headshotArray = [
   {
     number: 1,
     title: 'headshottunnel',
-    image: 'images/gallery/aliceheadshottunnel.jpg',
+    image: '/images/gallery/aliceheadshottunnel.jpg',
   },
   {
     number: 2,
     title: 'headshottunnel 2',
-    image: 'images/gallery/aliceheadshottunnel2.jpg',
+    image: '/images/gallery/aliceheadshottunnel2.jpg',
   },
   {
     number: 3,
     title: 'alice mayhem',
-    image: 'images/gallery/alicemayhem.jpg',
+    image: '/images/gallery/alicemayhem.jpg',
   },
 ];
 
@@ -60,22 +60,22 @@ const pets = [
   {
     number: 1,
     title: 'Clients',
-    image: 'images/gallery/sasukenoble.jpg',
+    image: '/images/gallery/sasukenoble.jpg',
   },
   {
     number: 2,
     title: 'Nora',
-    image: 'images/gallery/sasukespeed.jpg',
+    image: '/images/gallery/sasukespeed.jpg',
   },
   {
     number: 3,
     title: 'maeda',
-    image: 'images/gallery/maeda.jpg',
+    image: '/images/gallery/maeda.jpg',
   },
   {
-    number: 3,
+    number: 4,
     title: 'mocha',
-    image: 'images/gallery/mocha.jpg',
+    image: '/images/gallery/mocha.jpg',
   },
 ];
 
@@ -88,10 +88,12 @@ const Gallery = () => {
       <div className="flex flex-row flex-wrap justify-center">
         {bjjArray.map((image) => {
           return (
-            <Zoom>
+            <Zoom key={image.number}>
               <div className={'p-3 md:p-3 lr:p-10 lr:w-80'}>
                 <div>
-                  <img src={image.image} width="400" alt={image.title} />
+                  <picture>
+                    <img src={image.image} width="400" alt={image.title} />
+                  </picture>
                 </div>
               </div>
             </Zoom>
@@ -104,10 +106,12 @@ const Gallery = () => {
       <div className="flex flex-row flex-wrap justify-center">
         {headshotArray.map((image) => {
           return (
-            <Zoom>
+            <Zoom key={image.number}>
               <div className={'p-3 md:p-3 lr:p-10 lr:w-80'}>
                 <div>
-                  <img src={image.image} width="400" alt={image.title} />
+                  <picture>
+                    <img src={image.image} width="400" alt={image.title} />
+                  </picture>
                 </div>
               </div>
             </Zoom>
@@ -120,10 +124,12 @@ const Gallery = () => {
       <div className="flex flex-row flex-wrap justify-center">
         {pets.map((image) => {
           return (
-            <Zoom>
+            <Zoom key={image.number}>
               <div className={'p-3 md:p-3 lr:p-10 lr:w-80'}>
                 <div>
-                  <img src={image.image} width="400" alt={image.title} />
+                  <picture>
+                    <img src={image.image} width="400" alt={image.title} />
+                  </picture>
                 </div>
               </div>
             </Zoom>
